@@ -1,0 +1,36 @@
+//Smaller Number Exercise
+var smallerNumbersThanCurrent = function(nums) {
+    let arr = []
+    for (let i = 0; i<nums.length; i++){
+        arr.push((nums.filter((item) =>(item < nums[i]))).length)
+    }
+    return arr
+    
+};
+
+//Jewel and Stones Exercise
+var numJewelsInStones = function(J, S) {
+    var cont = 0;
+    for (let i = 0; i < J.length; i++) {
+        for (let j = 0; j < S.length; j++) {
+            if (J[i] === S[j]) {
+                cont++;
+            }
+        }
+    }
+    return cont;
+};
+
+// How Many steps to get to zero a number 
+var numberOfSteps  = function(num) {
+    var cont = 0;
+    while (num !== 0) {
+            if (num %2 === 0) {
+                num = num/2;
+            } else {
+                num -= 1;
+            }
+         cont ++;
+    }
+    return cont;
+};
